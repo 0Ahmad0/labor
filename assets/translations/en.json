@@ -1,0 +1,220 @@
+{
+  "find_your_home_service ":"Find your home service",
+  "select_language": "select language",
+  "english": "English",
+  "arabic": "Arabic",
+  "agree_our":"By creating an account, you agree to our",
+  "enter": "Enter",
+  "next": "Next",
+  "skip": "Skip",
+  "select_terms": "Terms And Conditions",
+  "filed_required": "This Filed Is Required",
+  "intro": {
+    "easy_process": "Easy Process",
+    "easy_process_sub_tile": "Find all your house needs in one place.  We provide every service to make your home experience smooth.",
+    "expert_people":"Expert People",
+    "expert_people_sub_tile": "We have the best in class individuals working just for you. They are well  trained and capable of handling anything you need.",
+    "all_in_one_place":"All In One Place",
+    "all_in_one_place_sub_tile": "We have all the household services \nyou need on a daily basis with\n easy access"
+  },
+  "login": {
+    "login": "Login",
+    "enter_login_data": "Please Enter your Phone and password\nto continue",
+    "phone": "Phone",
+    "password": "Password",
+    "forget_password": "Forget Password ?",
+    "login_button": "Login",
+    "or": "OR",
+    "facebook": "Facebook",
+    "google": "Google",
+    "do_not_have_account": "Don’t Have Account ? ",
+    "sign_up": "Sign Up"
+  },
+  "register": {
+    "register": "Register",
+    "enter_register_data": "Please Enter your Phone and password\nto continue",
+    "full_name": "Full Name",
+    "phone": "Phone",
+    "password": "Password",
+    "register_button": "Register",
+    "or": "OR",
+    "facebook": "Facebook",
+    "google": "Google",
+    "have_account": "Have Account ? ",
+    "sign_in": "Sign in"
+  },
+  "otp": {
+    "otp": "OTP",
+    "enter_code_sent": "An Authentecation code has been sent to\n",
+    "submit":"Submit",
+    "code_sent":"Code Sent. Resend Code in ",
+    "resend": "Resend code"
+  },
+  "reset_password": {
+    "reset_password": "Reset Password",
+    "enter_reset_data": "Create strong and secured\nnew password.",
+    "password":"Password",
+    "confirm_password": "Confirm Password",
+    "save_password":"Save Password"
+  },
+  "forget_password": {
+    "forget_password": "Forget Password",
+    "enter_forget_data": "Enter your Phone Number\nto reset password.",
+    "phone": "Phone",
+    "reset_password": "Reset Password"
+  },
+  "home": {
+    "good_morning": "Good Morning",
+    "find_your_service":"Find your home service Need a helping hand today?",
+    "your_location": "your location",
+    "all_you_need": "All you need in \none place",
+    "our_services": "Our services",
+    "see_all":"See ALL",
+    "hourly_cleaning": "hourly cleaning",
+    "contract_cleaning": "contract cleaning",
+    "electrical": "electrical",
+    "car_wash": "car wash",
+    "conditioning": "conditioning",
+    "plumbing": "plumbing"
+  },
+  "history": {
+    "history": "History",
+    "ongoing": "Ongoing",
+    "previous": "Previous",
+    "complete_payment": "Complete payment methods",
+    "price": "Price",
+    "in_review": "In Review",
+    "accept": "Accept",
+    "done": "Done",
+    "cancel": "Cancel"
+
+  },
+  "categories": {
+    "categories":"Categories",
+    "hourly_cleaning": "hourly cleaning",
+    "contract_cleaning": "contract cleaning",
+    "electrical": "electrical",
+    "car_wash": "car wash",
+    "conditioning": "conditioning",
+    "plumbing": "plumbing"
+  },
+  "add_card": {
+    "add_card": "Add Card",
+    "card_name": "Card Name",
+    "card_type": "Card type",
+    "card_num": "Card Num",
+    "exp_date": "Exp Date",
+    "cvv": "Cvv",
+    "save":"Save"
+  },
+  "profile": {
+    "profile": "Profile",
+    "edit": "Edit",
+    "payment_methods": "Payment Methods",
+    "payment_methods_subtitle": "Add your credit & debit cards",
+    "location": "Location",
+    "location_subtitle": "Add your Home Location ",
+    "push_notification": "Push Notification",
+    "push_notification_subtitle":"For daily update and others",
+    "select_language": "Select Language",
+    "arabic": "Arabic",
+    "english": "English",
+    "wallet": "Wallet",
+    "wallet_subtitle": "Details of Withdrawal and Deduction Operations",
+    "contact_us": "Contact Us",
+    "contact_us_subtitle": "For more information",
+    "logout":"Logout"
+  },
+  "edit_profile": {
+    "edit_profile": "Edit Profile",
+    "full_name":"Full Name",
+    "phone": "Phone",
+    "password": "Password",
+    "save_changes": "Save Changes",
+    "delete_account": "Delete Account"
+  },
+  "contact_us": {
+    "contact_us": " Contact Us",
+    "contact_us_enter_data": "We are pleased to contact you to hear your inquiries and opinions",
+    "name": "Name",
+    "phone": "Phone",
+    "massage": "Massage",
+    "message_hint": "Please Leave Message",
+    "send": "Send"
+  },
+  "notification": {
+    "notification": "Notification",
+    "confirmed": "Confirmed",
+    "payment_methods": "Complete payment methods",
+    "reminder": "Reminder",
+    "canceled": "Canceled"
+  },
+  "payment": {
+    "payment": "Payment",
+    "add_card": "Add Card"
+  },
+  "select_address": {
+    "select_address":"Select Address",
+    "city": "City",
+    "street": "Street",
+    "region": "Region",
+    "building": "Building",
+    "select": "Select"
+  },
+  "address": {
+    "address": "Address",
+    "your_location": "your location",
+    "please_add_address": "Please add address",
+    "city": "City",
+    "street": "Street",
+    "region": "Region",
+    "building": "Building",
+    "add": "Add"
+  },
+  "add_address": {
+    "add_address": "Add address",
+    "save":"Save"
+  },
+  "dialog": {
+    "completed": "Your request has been \ncompleted",
+    "dispatched_on_time": "The worker will be dispatched on time",
+    "home": "Home",
+    "cancel": "Cancel",
+    "review": "Your request is under review",
+    "confirmation_message_will_be_sent":"A confirmation message will be sent when your offer is accepted by the company"
+  },
+  "make_order": {
+    "step_1": "Step 1",
+    "step_2": "Step 2",
+    "step_3": "Step 3",
+    "period": "Period",
+    "morning": "Morning",
+    "night": "Night",
+    "number_of_hours": "number of Hours",
+    "nationality": "Nationality",
+    "city": "City",
+    "next": "Next",
+    "fliter": "Fliter",
+    "price": "Price",
+    "evaluation":"Evaluation",
+    "your_location": "your location",
+    "number_of_visits": "number of visits",
+    "choose_date_ime": "Choose Date & Time",
+    "choose_time": "Choose  Time"
+  },
+  "company": {
+    "company": "Company",
+    "comments": "Comments",
+    "add_comment": "Add Comment",
+    "add_your_comment_hint": "Add Your Comment"
+  },
+  "my_wallet": {
+    "my_wallet": "My Wallet",
+    "my_balance": "My Balance",
+    "add_to_wallet": "Add to wallet",
+    "added_to_your_balance": "have been added to your balance",
+    "wallet_discount": "Wallet Discount",
+    "have_been_wallet_discount": "have been wallet discount"
+  }
+
+}

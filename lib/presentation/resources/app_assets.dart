@@ -1,0 +1,53 @@
+const path = 'assets/images';
+
+class AppAssets {
+  const AppAssets._();
+
+  static const logoApp = '$path/logo.png';
+  static const intro1 = '$path/intro1.svg';
+  static const intro2 = '$path/intro2.svg';
+  static const intro3 = '$path/intro3.svg';
+  static const google = '$path/google.svg';
+  static const facebook = '$path/facebook.svg';
+  static const eye = '$path/eye.svg';
+  static const user = '$path/user.svg';
+  static const phone = '$path/phone.svg';
+  static const category1 = '$path/category1.svg';
+  static const category2 = '$path/category2.svg';
+  static const category3 = '$path/category3.svg';
+  static const category4 = '$path/category4.svg';
+  static const category5 = '$path/category5.svg';
+  static const category6 = '$path/category6.svg';
+  static const dashboard = '$path/darhboard.svg';
+  static const home = '$path/home.svg';
+  static const homeSlider = '$path/home_slider.svg';
+  static const logo = '$path/logo.svg';
+  static const notification = '$path/notification.svg';
+  static const orders = '$path/orders.svg';
+  static const noHistory = '$path/no_history.svg';
+  static const personHome = '$path/person_home.png';
+  static const calling = '$path/calling.svg';
+  static const card = '$path/card.svg';
+  static const language = '$path/language.svg';
+  static const location = '$path/location.svg';
+  static const logout = '$path/logout.svg';
+  static const notify = '$path/notify.svg';
+  static const wallet = '$path/wallet.svg';
+  static const deleteAccount = '$path/delete_account.svg';
+  static const reminderNotify = '$path/reminder_notify.svg';
+  static const canceledNotify = '$path/cancled_notify.svg';
+  static const completeNotify = '$path/complete_notify.svg';
+  static const americanExpress = '$path/american_express.svg';
+  static const cardGold = '$path/card_gold.svg';
+  static const dinersClub = '$path/diners_club.svg';
+  static const elo = '$path/elo.svg';
+  static const hiper = '$path/hiper.svg';
+  static const jcb = '$path/jcb.svg';
+  static const maestro = '$path/maestro.svg';
+  static const masterCard = '$path/maste_card.svg';
+  static const mirPay = '$path/mir_pay.svg';
+  static const unionPay = '$path/union_pay.svg';
+  static const visa = '$path/visa.svg';
+  static const reviewDialog = '$path/review_dialog.svg';
+  static const confirmDialog = '$path/confirm_dialog.svg';
+}

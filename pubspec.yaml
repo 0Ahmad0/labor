@@ -1,0 +1,58 @@
+name: labor
+description: A new Flutter project.
+
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.6 <3.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  cupertino_icons: ^1.0.2
+  #app_logo
+  flutter_launcher_icons: ^0.13.1
+  #image svg
+  flutter_svg: ^2.0.5
+  #fonts app
+  google_fonts: ^4.0.4
+  #language
+  easy_localization: ^3.0.2
+  #responsive design
+  flutter_screenutil: ^5.7.0
+  #animation navigation pages
+  page_transition: ^2.0.9
+  smooth_page_indicator: ^1.1.0
+  #verfication code
+  pinput: ^2.2.31
+  #date formate
+  intl: ^0.17.0
+  #picker image
+  image_picker: ^1.0.1
+  flutter_osm_plugin: ^0.53.2
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+#AppICon
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/app_logo.png"
+
+  flutter_lints: ^2.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+   - assets/images/
+   - assets/icons/
+   - assets/translations/
