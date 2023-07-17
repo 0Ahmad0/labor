@@ -3,8 +3,11 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:labor/presentation/resources/app_constants.dart';
+import 'package:labor/presentation/widgets/app_step2_item.dart';
 
 import '../../../../models/period.dart';
+import '../../../../models/step2item.dart';
 import '../../../../translations/locale_keys.g.dart';
 import '../../../resources/app_assets.dart';
 import '../../../resources/app_colors.dart';
@@ -21,16 +24,55 @@ class Step2 extends StatefulWidget {
 }
 
 class _Step2State extends State<Step2> {
-  int _selectedIndex = 0;
-  late final List<Period> _periods;
-  final numberHoursController = TextEditingController(text: "1");
-  final nationalityController = TextEditingController(text: '🇸🇾');
-  final cityController = TextEditingController(text: "Riadh");
+  late final List<Step2Item> _items;
 
   _fillList() {
-    _periods = [
-      Period(name: tr(LocaleKeys.make_order_morning), icon: AppAssets.sun),
-      Period(name: tr(LocaleKeys.make_order_night), icon: AppAssets.night),
+    _items = [
+      Step2Item(
+          companyLogo: AppAssets.phone,
+          companyName: 'companyName',
+          companyRate: 3,
+          price: 1100,
+          isSelected: true,
+          type: 'type',
+          nationality: '🇸🇾',
+          time: '4 Hours'),
+      Step2Item(
+          companyLogo: AppAssets.elo,
+          companyName: 'companyName',
+          companyRate: 1,
+          price: 1100,
+          isSelected: false,
+          type: 'type',
+          nationality: '🇸🇾',
+          time: '4 Hours'),
+      Step2Item(
+          companyLogo: AppAssets.night,
+          companyName: 'companyName',
+          companyRate: 5,
+          price: 1100,
+          isSelected: false,
+          type: 'type',
+          nationality: '🇸🇾',
+          time: '4 Hours'),
+      Step2Item(
+          companyLogo: AppAssets.americanExpress,
+          companyName: 'companyName',
+          companyRate: 4,
+          isSelected: false,
+          price: 1100,
+          type: 'type',
+          nationality: '🇸🇾',
+          time: '4 Hours'),
+      Step2Item(
+          companyLogo: AppAssets.sun,
+          companyName: 'companyName',
+          companyRate: 1,
+          price: 1100,
+          isSelected: false,
+          type: 'type',
+          nationality: '🇸🇾',
+          time: '4 Hours'),
     ];
   }
 
@@ -47,7 +89,81 @@ class _Step2State extends State<Step2> {
         Expanded(
           child: ListView(
             padding: EdgeInsets.all(AppPadding.p20.sp),
-            children: [],
+            children: [
+              Text(
+                tr(LocaleKeys.make_order_fliter),
+                style: getBoldStyle(
+                  fontSize: 16.sp,
+                ),
+              ),
+              SizedBox(
+                height: AppSize.s20.sp,
+              ),
+              Row(
+                children: [
+                  PopupMenuButton(
+                    itemBuilder: (_) {
+                      return [
+                        PopupMenuItem(child: Text('tr1')),
+                        PopupMenuItem(child: Text('tr2')),
+                      ];
+                    },
+                    child: Container(
+                      padding: EdgeInsets.symmetric(
+                          vertical: AppPadding.p8.sp,
+                          horizontal: AppPadding.p20.sp),
+                      decoration: BoxDecoration(color: AppColors.white),
+                      child: Row(
+                        children: [
+                          Text(
+                            tr(LocaleKeys.make_order_price),
+                            style: getBoldStyle(
+                                fontSize: 14.sp, color: AppColors.black),
+                          ),
+                          Icon(Icons.keyboard_arrow_down),
+                        ],
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: AppSize.s10.sp,
+                  ),
+                  PopupMenuButton(
+                    itemBuilder: (_) {
+                      return [
+                        PopupMenuItem(child: Text('tr1')),
+                        PopupMenuItem(child: Text('tr2')),
+                      ];
+                    },
+                    child: Container(
+                      padding: EdgeInsets.symmetric(
+                          vertical: AppPadding.p8.sp,
+                          horizontal: AppPadding.p20.sp),
+                      decoration: BoxDecoration(color: AppColors.white),
+                      child: Row(
+                        children: [
+                          Text(
+                            tr(LocaleKeys.make_order_evaluation),
+                            style: getBoldStyle(
+                                fontSize: 14.sp, color: AppColors.black),
+                          ),
+                          Icon(Icons.keyboard_arrow_down),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: AppSize.s20.sp,
+              ),
+              Column(
+                children: List.generate(
+                  _items.length,
+                  (index) => AppStep2Item(item: _items[index]),
+                ),
+              )
+            ],
           ),
         ),
         Container(

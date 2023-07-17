@@ -8,6 +8,7 @@ import 'presentation/resources/app_routes.dart';
 import 'presentation/resources/app_strings.dart';
 import 'translations/codegen_loader.g.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -40,9 +41,7 @@ class MyApp extends StatelessWidget {
       builder: (BuildContext context, Widget? child) {
         return MaterialApp(
           supportedLocales: context.supportedLocales,
-          localizationsDelegates: [
-            CountryLocalizations.delegate,
-          ],
+          localizationsDelegates: context.localizationDelegates,
           title: AppStrings.appName,
           theme: AppTheme.appTheme,
           debugShowCheckedModeBanner: false,
