@@ -13,6 +13,8 @@ import 'package:labor/presentation/views/my_wallate/my_wallet_view.dart';
 import 'package:labor/presentation/views/navbar/navbar_view.dart';
 import 'package:labor/presentation/views/notification/notification_view.dart';
 import 'package:labor/presentation/views/on_boarding/on_boarding_view.dart';
+import 'package:labor/presentation/views/orders/complete_order_view.dart';
+import 'package:labor/presentation/views/orders/order_details_view.dart';
 import 'package:labor/presentation/views/payment/payment_view.dart';
 import 'package:labor/presentation/views/select_address/select_address_view.dart';
 import 'package:labor/presentation/views/splash/splash_view.dart';
@@ -56,6 +58,8 @@ class Routes {
   static const String myWallet = '/MyWallet';
   static const String company = '/Company';
   static const String makeOrder = '/MakeOrder';
+  static const String orderDetalis = '/OrderDetalis';
+  static const String orderComplete = '/CompleteOrder';
 }
 
 class RoutesGenerator {
@@ -138,6 +142,12 @@ class RoutesGenerator {
       case Routes.makeOrder:
         return PageTransition(
             child: MakeOrderView(), type: PageTransitionType.topToBottom);
+      case Routes.orderDetalis:
+        return PageTransition(
+            child: OrderDetailsView(), type: PageTransitionType.bottomToTop);
+      case Routes.orderComplete:
+        return PageTransition(
+            child: CompleteOrderView(), type: PageTransitionType.topToBottom);
       default:
         return undefinedRoute();
     }
