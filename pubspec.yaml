@@ -38,10 +38,12 @@ dependencies:
   flutter_osm_plugin: ^0.53.2
   #Rate By Stars
   flutter_rating_bar: ^4.0.1
-
+  #Country Flag
+  country_picker: ^2.0.20
+  #Picker Date
+  date_picker_timeline:
   #databse and FireBase
   firebase_core: ^2.15.0
-  country_picker: ^2.0.20
 
 
 
