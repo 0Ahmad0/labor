@@ -1,3 +1,5 @@
+import 'dart:developer';
+import 'package:country_picker/country_picker.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -6,7 +8,14 @@ import 'package:labor/presentation/resources/app_assets.dart';
 import 'package:labor/presentation/resources/app_colors.dart';
 import 'package:labor/presentation/resources/app_styles.dart';
 import 'package:labor/presentation/resources/app_values.dart';
+import 'package:labor/presentation/widgets/app_dropdown_button_form_filed.dart';
+import 'package:labor/presentation/widgets/app_textform_filed.dart';
 import 'package:labor/translations/locale_keys.g.dart';
+
+import '../../../models/period.dart';
+import 'steps_screen/step1.dart';
+import 'steps_screen/step2.dart';
+import 'steps_screen/step3.dart';
 
 class MakeOrderView extends StatefulWidget {
   const MakeOrderView({Key? key}) : super(key: key);
@@ -101,15 +110,9 @@ class _MakeOrderViewState extends State<MakeOrderView> {
             },
             controller: pageController,
             children: [
-              Container(
-                color: Colors.redAccent,
-              ),
-              Container(
-                color: Colors.greenAccent,
-              ),
-              Container(
-                color: Colors.pinkAccent,
-              ),
+              Step1(),
+              Step2(),
+              Step3(),
             ],
           ))
         ],

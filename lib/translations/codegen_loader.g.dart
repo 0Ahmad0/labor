@@ -456,7 +456,7 @@ static const Map<String,dynamic> en = {
     "confirmation_message_will_be_sent": "A confirmation message will be sent when your offer is accepted by the company"
   },
   "make_order": {
-    "step_1": "Step",
+    "step": "Step",
     "period": "Period",
     "morning": "Morning",
     "night": "Night",
