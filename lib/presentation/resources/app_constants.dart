@@ -3,6 +3,7 @@ class AppConstants {
 
   static const int splashDelay = 3;
   static const int defaultDelay = 300;
+  static const int itemCountRating = 5;
   static const double widthSize = 428.0;
   static const double heightSize = 926.0;
   static const int onBoardingDelay = 300;
@@ -31,3 +32,5 @@ enum CreditCardTypes {
   unionPay,
   visa,
 }
+
+enum WalletStatus { add, discount }

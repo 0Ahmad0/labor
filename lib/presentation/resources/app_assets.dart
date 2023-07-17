@@ -50,4 +50,8 @@ class AppAssets {
   static const visa = '$path/visa.svg';
   static const reviewDialog = '$path/review_dialog.svg';
   static const confirmDialog = '$path/confirm_dialog.svg';
+  static const wallet2 = '$path/wallet2.svg';
+  static const order_type = '$path/order_type.svg';
+  static const night = '$path/night.svg';
+  static const sun = '$path/sun.svg';
 }

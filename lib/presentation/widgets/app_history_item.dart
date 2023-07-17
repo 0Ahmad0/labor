@@ -104,6 +104,9 @@ class AppHistoryItem extends StatelessWidget {
             height: AppSize.s4.sp,
           ),
           ListTile(
+            onTap: () {
+              Navigator.pushNamed(context, Routes.company);
+            },
             contentPadding: EdgeInsets.zero,
             leading: CircleAvatar(
               backgroundColor: AppColors.primary,

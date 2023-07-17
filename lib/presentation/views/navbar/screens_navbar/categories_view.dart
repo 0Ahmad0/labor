@@ -6,6 +6,7 @@ import 'package:labor/presentation/resources/app_assets.dart';
 import 'package:labor/presentation/resources/app_colors.dart';
 import 'package:labor/translations/locale_keys.g.dart';
 import '../../../../models/categories.dart';
+import '../../../resources/app_routes.dart';
 import '../../../resources/app_styles.dart';
 import '../../../resources/app_values.dart';
 
@@ -78,20 +79,31 @@ class _CategoriesViewState extends State<CategoriesView> {
               mainAxisSpacing: 24.sp),
           itemBuilder: (_, index) {
             final category = _categories[index];
-            return Container(
-              decoration: BoxDecoration(color: AppColors.white, boxShadow: [
-                BoxShadow(
-                  color: AppColors.black.withOpacity(.05),
-                  blurRadius: 8.sp,
-                  offset: Offset(0, 4.sp),
+            return GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, Routes.makeOrder);
+              },
+              child: Container(
+                decoration: BoxDecoration(color: AppColors.white, boxShadow: [
+                  BoxShadow(
+                    color: AppColors.black.withOpacity(.05),
+                    blurRadius: 8.sp,
+                    offset: Offset(0, 4.sp),
+                  ),
+                ]),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SvgPicture.asset(category.image),
+                    SizedBox(
+                      height: AppSize.s10.sp,
+                    ),
+                    Text(
+                      category.name,
+                      style: getBoldStyle(fontSize: 16.sp),
+                    )
+                  ],
                 ),
-              ]),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SvgPicture.asset(category.image),
-                  Text(category.name)
-                ],
               ),
             );
           },

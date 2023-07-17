@@ -6,7 +6,10 @@ import 'package:labor/presentation/views/auth/login/login_view.dart';
 import 'package:labor/presentation/views/auth/otp/otp_view.dart';
 import 'package:labor/presentation/views/auth/register/register_view.dart';
 import 'package:labor/presentation/views/auth/reset_password/reset_password_view.dart';
+import 'package:labor/presentation/views/company/company_view.dart';
 import 'package:labor/presentation/views/contact_us/contact_us_view.dart';
+import 'package:labor/presentation/views/make_order/make_order_view.dart';
+import 'package:labor/presentation/views/my_wallate/my_wallet_view.dart';
 import 'package:labor/presentation/views/navbar/navbar_view.dart';
 import 'package:labor/presentation/views/notification/notification_view.dart';
 import 'package:labor/presentation/views/on_boarding/on_boarding_view.dart';
@@ -48,8 +51,11 @@ class Routes {
   static const String selectAddress = '/SelectAddress';
   static const String addAddress = '/AddAddress';
 
-  //Payment
+  //
   static const String addCard = '/AddCard';
+  static const String myWallet = '/MyWallet';
+  static const String company = '/Company';
+  static const String makeOrder = '/MakeOrder';
 }
 
 class RoutesGenerator {
@@ -123,6 +129,15 @@ class RoutesGenerator {
             child: AddAddressView(),
             type: PageTransitionType.scale,
             alignment: Alignment.bottomRight);
+      case Routes.myWallet:
+        return PageTransition(
+            child: MyWalletView(), type: PageTransitionType.leftToRight);
+      case Routes.company:
+        return PageTransition(
+            child: CompanyView(), type: PageTransitionType.rightToLeft);
+      case Routes.makeOrder:
+        return PageTransition(
+            child: MakeOrderView(), type: PageTransitionType.topToBottom);
       default:
         return undefinedRoute();
     }

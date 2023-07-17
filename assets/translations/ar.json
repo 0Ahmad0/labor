@@ -182,8 +182,80 @@
     "cancel": "الرجوع",
     "review": "تم ارسال طلبك",
     "confirmation_message_will_be_sent":"سيتم ارسال رسالة تاكيد باموافقة\n او الرفض بعد مراجعة طلبك من قبل الشركة"
-  }
+  },
+  "make_order": {
+    "step": "الخطوة",
+    "period": "الفترة",
+    "morning": "صباحا",
+    "night": "مساء",
+    "number_of_hours": "عدد الساعات",
+    "nationality": "الجنيسة",
+    "city": "المدينة",
+    "next": "التالي",
+    "fliter": "الفلتر",
+    "price": "السعر",
+    "evaluation":"التقييم",
+    "your_location": "موقعك",
+    "number_of_visits": "عدد الزيارات",
+    "choose_date_ime": "اختار التاريخ والوقت",
+    "choose_time": "اختار الساعة"
+  },
+  "company": {
+    "company": "عن الشركة",
+    "comments": "التعليقات",
+    "add_your_rate": "اضف تقيمك للشركة",
+    "add_comment": "اضافة تعليق",
+    "add_your_comment_hint": "اترك تعليقك"
+  },
+  "my_wallet": {
+    "my_wallet": "محفظتي",
+    "my_balance": "رصيدي",
+    "add_to_wallet": "تمت اضافة رصيد",
+    "added_to_your_balance": "تم اضافة رصيد من قبل الشركة بمقدار",
+    "wallet_discount": "تم خصم رصيد",
+    "have_been_wallet_discount": "تم خصم رصيد من قبل الشركة بمقدار"
+  },
+  "order_detalis": {
+    "order_detalis": "تفاصيل الطلب",
+    "my_order_detalis": "تفاصيل طلبي",
+    "name_of_order": "الطلب",
+    "date_of_order": "تاريخ الطلب",
+    "code_of_order": "رقم الطلب",
+    "company": "اسم الشركة",
+    "detalis_order": "تفاصيل الطلب",
+    "order_states":"حالة الطلب",
+    "your_order_location": "موقعك",
+    "price": "السعر",
+    "price_order": "سعر الطلب",
+    "tax": "الضريبة",
+    "discount":"التخفيض",
+    "total_price": "اجمالي السعر"
+  },
+  "complete_order": {
+    "complete_order": "اكمال الطلب",
+    "my_order_detalis": "تفاصيل طلبي",
+    "name_of_order": "الطلب",
+    "date_of_order": "تاريخ الطلب",
+    "code_of_order": "رقم الطلب",
+    "company": "اسم الشركة",
+    "detalis_order": "تفاصيل الطلب",
+    "order_states":"حالة الطلب",
+    "your_order_location": "موقعك",
+    "payment_methods": "طرق الدفع",
+    "cash": "عند الوصول",
+    "debit_card": "الدفع الالكتروني",
+    "add_new_card": "اضافة بطاقة اخري",
+    "leave_notes": "اترك ملاحظاتك",
+    "your_notes": "برجاء ترك ملاحظاتك",
+    "add_cobon": "اضافة كوبون",
+    "price": "السعر",
+    "price_order": "سعر الطلب",
+    "tax": "الضريبة",
+    "discount":"التخفيض",
+    "total_price": "اجمالي السعر",
+    "pay": "ادفع"
 
+  }
 
 
 }

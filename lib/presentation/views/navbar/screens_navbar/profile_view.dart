@@ -143,6 +143,12 @@ class ProfileView extends StatelessWidget {
             goToRoute: Routes.contactUs,
           ),
           AppProfileItem(
+            title: tr(LocaleKeys.profile_wallet),
+            subTitle: tr(LocaleKeys.profile_wallet_subtitle),
+            icon: AppAssets.wallet,
+            goToRoute: Routes.myWallet,
+          ),
+          AppProfileItem(
             title: tr(LocaleKeys.profile_logout),
             icon: AppAssets.logout,
             goToRoute: '',

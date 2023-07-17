@@ -184,9 +184,7 @@
     "confirmation_message_will_be_sent":"A confirmation message will be sent when your offer is accepted by the company"
   },
   "make_order": {
-    "step_1": "Step 1",
-    "step_2": "Step 2",
-    "step_3": "Step 3",
+    "step_1": "Step",
     "period": "Period",
     "morning": "Morning",
     "night": "Night",
@@ -205,6 +203,7 @@
   "company": {
     "company": "Company",
     "comments": "Comments",
+    "add_your_rate": "Add Your Rate",
     "add_comment": "Add Comment",
     "add_your_comment_hint": "Add Your Comment"
   },
@@ -215,6 +214,47 @@
     "added_to_your_balance": "have been added to your balance",
     "wallet_discount": "Wallet Discount",
     "have_been_wallet_discount": "have been wallet discount"
+  },
+  "order_detalis": {
+    "order_detalis": "Order Detalis",
+    "my_order_detalis": "My Order Detalis",
+    "name_of_order": "Name of Order",
+    "date_of_order": "Date of Order",
+    "code_of_order": "Code of Order",
+    "company": "Company",
+    "detalis_order": "Detalis Order",
+    "order_states":"Order States",
+    "your_order_location": "your  Order location",
+    "price": "Price",
+    "price_order": "price order",
+    "tax": "Tax",
+    "discount":"Discount",
+    "total_price": "Total Price"
+  },
+  "complete_order": {
+    "complete_order": "Complete Order",
+    "my_order_detalis": "My Order Detalis",
+    "name_of_order": "Name of Order",
+    "date_of_order": "Date of Order",
+    "code_of_order": "Code of Order",
+    "company": "Company",
+    "detalis_order": "Detalis Order",
+    "order_states":"Order States",
+    "your_order_location": "your  Order location",
+    "payment_methods": "Payment Methods",
+    "cash": "Cash",
+    "debit_card": "Debit Card",
+    "add_new_card": "Add New Card",
+    "leave_notes": "Leave notes",
+    "your_notes": "Your notes",
+    "add_cobon": "Add Cobon",
+    "price": "Price",
+    "price_order": "price order",
+    "tax": "Tax",
+    "discount":"Discount",
+    "total_price": "Total Price",
+    "pay": "Pay"
+
   }
 
 }
