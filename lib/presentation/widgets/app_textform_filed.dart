@@ -32,7 +32,7 @@ class AppTextFiled extends StatefulWidget {
   final TextInputAction textInputAction;
   final TextInputType keyboardType;
   final TextEditingController? controller;
-  final IconData? iconData;
+  final Widget? iconData;
   final String? hintText;
   final bool suffixIcon;
   final bool autofocus;
@@ -89,22 +89,23 @@ class _AppTextFiledState extends State<AppTextFiled> {
             borderSide: BorderSide(width: 1, color: AppColors.primary),
             borderRadius: BorderRadius.circular(8.r),
           ),
-          suffixIcon: Padding(
-            padding: EdgeInsets.all(AppPadding.p12.sp),
-            child: InkWell(
-              onTap: widget.icon == AppAssets.eye
-                  ? () {
-                      _showPassword();
-                    }
-                  : null,
-              child: SvgPicture.asset(
-                widget.icon ?? "",
-                color: (!widget.obscureText && widget.icon == AppAssets.eye)
-                    ? AppColors.primary
-                    : AppColors.grey,
+          suffixIcon: widget.iconData ??
+              Padding(
+                padding: EdgeInsets.all(AppPadding.p12.sp),
+                child: InkWell(
+                  onTap: widget.icon == AppAssets.eye
+                      ? () {
+                          _showPassword();
+                        }
+                      : null,
+                  child: SvgPicture.asset(
+                    widget.icon ?? "",
+                    color: (!widget.obscureText && widget.icon == AppAssets.eye)
+                        ? AppColors.primary
+                        : AppColors.grey,
+                  ),
+                ),
               ),
-            ),
-          ),
           hintText: widget.hintText),
     );
   }

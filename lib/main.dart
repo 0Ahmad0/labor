@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:labor/presentation/resources/app_constants.dart';
 import 'package:labor/presentation/resources/app_theme.dart';
+import 'package:labor/presentation/views/orders/complete_order_view.dart';
 import 'package:labor/presentation/views/orders/order_details_view.dart';
 import 'presentation/resources/app_routes.dart';
 import 'presentation/resources/app_strings.dart';
@@ -59,7 +60,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           onGenerateRoute: RoutesGenerator.getRoute,
           initialRoute: Routes.splashRoute,
-          // home: OrderDetailsView(),
+          // home: CompleteOrderView(),
         );
       },
     );
@@ -68,5 +69,4 @@ class MyApp extends StatelessWidget {
 /*
 flutter pub run easy_localization:generate -S "assets/translations/" -O "lib/translations"
 flutter pub run easy_localization:generate -S "assets/translations/" -O "lib/translations" -o "locale_keys.g.dart" -f keys
-
  */

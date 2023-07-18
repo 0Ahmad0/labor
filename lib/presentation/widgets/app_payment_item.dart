@@ -17,12 +17,14 @@ class AppPaymentItem extends StatelessWidget {
     required this.cardNum,
     required this.name,
     required this.dateExp,
+    this.margin = 60,
   });
 
   final CreditCardTypes creditCardTypes;
   final String cardNum;
   final String name;
   final String dateExp;
+  final double margin;
 
   String _getIcon(CreditCardTypes creditCardTypes) {
     switch (creditCardTypes) {
@@ -54,7 +56,7 @@ class AppPaymentItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(bottom: AppMargin.m60.sp),
+      margin: EdgeInsets.only(bottom: margin.sp),
       padding: EdgeInsets.all(AppPadding.p20.sp),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(

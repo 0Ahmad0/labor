@@ -8,6 +8,7 @@ import 'package:labor/presentation/resources/app_values.dart';
 import 'package:labor/presentation/widgets/app_select_your_location.dart';
 
 import '../../../translations/locale_keys.g.dart';
+import '../../widgets/app_order_item.dart';
 
 class OrderDetailsView extends StatefulWidget {
   const OrderDetailsView({Key? key}) : super(key: key);
@@ -173,41 +174,5 @@ class _OrderDetailsViewState extends State<OrderDetailsView> {
             fontSize: 16.sp, color: discount ? AppColors.primary : null),
       ),
     );
-  }
-}
-
-class AppOrderItem extends StatelessWidget {
-  const AppOrderItem({
-    super.key,
-    required this.title,
-    this.subTitle,
-    this.child,
-  });
-
-  final String title;
-  final String? subTitle;
-  final Widget? child;
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-        child: ListTile(
-      dense: true,
-      isThreeLine: true,
-      contentPadding: EdgeInsets.zero,
-      title: Text(
-        title,
-        style: getMediumStyle(fontSize: 12.sp, color: AppColors.greyText),
-      ),
-      subtitle: Padding(
-        padding: EdgeInsets.only(top: AppPadding.p8.sp),
-        child: subTitle == null
-            ? child
-            : Text(
-                subTitle!,
-                style: getMediumStyle(fontSize: 14.sp, color: AppColors.black),
-              ),
-      ),
-    ));
   }
 }
