@@ -66,3 +66,8 @@ flutter:
    - assets/images/
    - assets/icons/
    - assets/translations/
+  fonts:
+    - family: 'dinNextLtW23'
+      fonts:
+        - asset: 'assets/fonts/din_next_lt_w23.ttf'
+

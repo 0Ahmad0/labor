@@ -15,7 +15,7 @@ class CodegenLoader extends AssetLoader{
   }
 
   static const Map<String,dynamic> ar = {
-  "find_your_home_service ": "جميع الخدمات المنزلية\nفي مكان واحد",
+  "find_your_home_service ": "جميع الخدمات المنزلية في مكان واحد",
   "select_language": "اختار اللغة",
   "english": "English",
   "arabic": "العربية",

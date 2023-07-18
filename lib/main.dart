@@ -1,6 +1,7 @@
 import 'package:country_picker/country_picker.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:labor/presentation/resources/app_constants.dart';
 import 'package:labor/presentation/resources/app_theme.dart';
@@ -13,18 +14,23 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
-  runApp(
-    EasyLocalization(
-      path: 'assets/translations/',
-      supportedLocales: [
-        Locale("en"),
-        Locale("ar"),
-      ],
-      fallbackLocale: Locale("ar"),
-      assetLoader: CodegenLoader(),
-      child: MyApp(),
-    ),
-  );
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]).then((value) {
+    runApp(
+      EasyLocalization(
+        path: 'assets/translations/',
+        supportedLocales: [
+          Locale("en"),
+          Locale("ar"),
+        ],
+        fallbackLocale: Locale("ar"),
+        assetLoader: CodegenLoader(),
+        child: MyApp(),
+      ),
+    );
+  });
 }
 
 class MyApp extends StatelessWidget {
@@ -36,14 +42,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    context.setLocale(Locale('ar'));
     return ScreenUtilInit(
       designSize: Size(AppConstants.widthSize, AppConstants.heightSize),
       builder: (BuildContext context, Widget? child) {
         return MaterialApp(
           supportedLocales: context.supportedLocales,
-          localizationsDelegates: context.localizationDelegates,
+          // localizationsDelegates: context.localizationDelegates,
+          localizationsDelegates: [
+            CountryLocalizations.delegate,
+          ]..addAll(context.localizationDelegates),
           title: AppStrings.appName,
-          theme: AppTheme.appTheme,
+          locale: Locale('ar'),
+          theme: AppTheme.appThemeAr,
           debugShowCheckedModeBanner: false,
           onGenerateRoute: RoutesGenerator.getRoute,
           initialRoute: Routes.splashRoute,

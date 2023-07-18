@@ -111,8 +111,8 @@ class _Step3State extends State<Step3> {
                 activeDayColor: AppColors.white,
                 activeBackgroundDayColor: AppColors.primary,
                 dotsColor: Colors.transparent,
-                selectableDayPredicate: (date) => date.day != 23,
-                locale: 'en',
+                selectableDayPredicate: (date) => date.day != 20,
+                locale: context.locale.languageCode,
               ),
               SizedBox(
                 height: AppSize.s20.sp,
@@ -170,17 +170,6 @@ class _Step3State extends State<Step3> {
             ],
           ),
         ),
-        Container(
-          padding: EdgeInsets.all(AppPadding.p20.sp),
-          width: double.infinity,
-          decoration: BoxDecoration(color: AppColors.white),
-          child: ElevatedButton(
-              onPressed: () {},
-              child: Text(
-                tr(LocaleKeys.make_order_next),
-                style: getBoldStyle(fontSize: 16.sp),
-              )),
-        )
       ],
     );
   }

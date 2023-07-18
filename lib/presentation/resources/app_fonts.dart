@@ -1,4 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+class FontManager {
+  const FontManager._();
+  static String fontAr = 'dinNextLtW23';
+  static String? fontEn = GoogleFonts.quicksand().fontFamily;
+}
 
 class FontWeightManager {
   const FontWeightManager._();

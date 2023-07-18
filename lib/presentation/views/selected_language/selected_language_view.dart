@@ -20,125 +20,129 @@ class SelectedLanguageView extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(AppPadding.p20.sp),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(
-                height: AppSize.s50.sp,
-              ),
-              Image.asset(AppAssets.logoApp),
-              SizedBox(
-                height: AppSize.s50.sp,
-              ),
-              Text(tr(LocaleKeys.find_your_home_service),
-                  style: getBoldStyle(
-                    fontSize: 48.sp,
-                  )),
-              SizedBox(
-                height: AppSize.s50.sp,
-              ),
-              Text(
-                tr(LocaleKeys.select_language),
-                style: getBoldStyle(fontSize: 20.sp),
-              ),
-              SizedBox(
-                height: AppSize.s30.sp,
-              ),
-              InkWell(
-                onTap: () {
-                  selectedLanguage = SelectedLanguage.english;
-                },
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      tr(LocaleKeys.english),
-                      style: getSemiBoldStyle(fontSize: 16.sp),
-                    ),
-                    Radio(
-                      value: SelectedLanguage.english,
-                      groupValue: selectedLanguage,
-                      onChanged: (value) {
-                        selectedLanguage = value!;
-                      },
-                    )
-                  ],
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  height: AppSize.s20.sp,
                 ),
-              ),
-              Divider(
-                height: 0.0,
-                color: AppColors.black,
-              ),
-              SizedBox(
-                height: AppSize.s20.sp,
-              ),
-              InkWell(
-                onTap: () {
-                  selectedLanguage = SelectedLanguage.arabic;
-                },
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      tr(LocaleKeys.arabic),
-                      style: getSemiBoldStyle(fontSize: 16.sp),
-                    ),
-                    Radio(
-                      value: SelectedLanguage.arabic,
-                      groupValue: selectedLanguage,
-                      onChanged: (value) {
-                        selectedLanguage = value!;
-                      },
-                    )
-                  ],
+                Image.asset(AppAssets.logoApp),
+                SizedBox(
+                  height: AppSize.s50.sp,
                 ),
-              ),
-              Divider(
-                height: 0.0,
-                color: AppColors.black,
-              ),
-              SizedBox(
-                height: AppSize.s20.sp,
-              ),
-              InkWell(
-                onTap: () {
-                  agreeOurTerms = !agreeOurTerms;
-                },
-                child: Row(
-                  children: [
-                    Checkbox(
-                      value: agreeOurTerms,
-                      onChanged: (value) {
-                        agreeOurTerms = value!;
-                      },
-                    ),
-                    Text.rich(TextSpan(children: [
-                      TextSpan(
-                          text: tr(LocaleKeys.agree_our),
-                          style: getRegularStyle(
-                            fontSize: 12.sp,
-                            color: AppColors.lightGrey,
-                          )),
-                      TextSpan(
-                          text: '\n' + tr(LocaleKeys.select_terms),
-                          style: getBoldStyle(
-                            fontSize: 12.sp,
-                            color: AppColors.primary,
-                          )),
-                    ]))
-                  ],
+                Text(tr(LocaleKeys.find_your_home_service),
+                    style: getBoldStyle(
+                      fontSize: 48.sp,
+                    )),
+                SizedBox(
+                  height: AppSize.s50.sp,
                 ),
-              ),
-              const Spacer(),
-              ElevatedButton(
-                  onPressed: () {
-                    Navigator.pushReplacementNamed(context, Routes.onBoarding);
+                Text(
+                  tr(LocaleKeys.select_language),
+                  style: getBoldStyle(fontSize: 20.sp),
+                ),
+                SizedBox(
+                  height: AppSize.s30.sp,
+                ),
+                InkWell(
+                  onTap: () {
+                    selectedLanguage = SelectedLanguage.english;
                   },
-                  child: Text(tr(LocaleKeys.enter))),
-              SizedBox(
-                height: AppSize.s20.sp,
-              ),
-            ],
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        tr(LocaleKeys.english),
+                        style: getSemiBoldStyle(fontSize: 16.sp),
+                      ),
+                      Radio(
+                        value: SelectedLanguage.english,
+                        groupValue: selectedLanguage,
+                        onChanged: (value) {
+                          selectedLanguage = value!;
+                        },
+                      )
+                    ],
+                  ),
+                ),
+                Divider(
+                  height: 0.0,
+                  color: AppColors.black,
+                ),
+                SizedBox(
+                  height: AppSize.s20.sp,
+                ),
+                InkWell(
+                  onTap: () {
+                    selectedLanguage = SelectedLanguage.arabic;
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        tr(LocaleKeys.arabic),
+                        style: getSemiBoldStyle(fontSize: 16.sp),
+                      ),
+                      Radio(
+                        value: SelectedLanguage.arabic,
+                        groupValue: selectedLanguage,
+                        onChanged: (value) {
+                          selectedLanguage = value!;
+                        },
+                      )
+                    ],
+                  ),
+                ),
+                Divider(
+                  height: 0.0,
+                  color: AppColors.black,
+                ),
+                SizedBox(
+                  height: AppSize.s20.sp,
+                ),
+                InkWell(
+                  onTap: () {
+                    agreeOurTerms = !agreeOurTerms;
+                  },
+                  child: Row(
+                    children: [
+                      Checkbox(
+                        value: agreeOurTerms,
+                        onChanged: (value) {
+                          agreeOurTerms = value!;
+                        },
+                      ),
+                      Expanded(
+                        child: ListTile(
+                          title: Text(tr(LocaleKeys.agree_our),
+                              style: getRegularStyle(
+                                fontSize: 12.sp,
+                                color: AppColors.lightGrey,
+                              )),
+                          subtitle: Text(
+                            tr(LocaleKeys.select_terms),
+                            style: getBoldStyle(
+                              fontSize: 12.sp,
+                              color: AppColors.primary,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(
+                          context, Routes.onBoarding);
+                    },
+                    child: Text(tr(LocaleKeys.enter))),
+                SizedBox(
+                  height: AppSize.s20.sp,
+                ),
+              ],
+            ),
           ),
         ),
       ),

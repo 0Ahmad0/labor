@@ -6,8 +6,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:labor/presentation/resources/app_assets.dart';
 import 'package:labor/presentation/resources/app_colors.dart';
+import 'package:labor/presentation/resources/app_constants.dart';
 import 'package:labor/presentation/resources/app_styles.dart';
 import 'package:labor/presentation/resources/app_values.dart';
+import 'package:labor/presentation/widgets/app_dialog.dart';
 import 'package:labor/presentation/widgets/app_dropdown_button_form_filed.dart';
 import 'package:labor/presentation/widgets/app_textform_filed.dart';
 import 'package:labor/translations/locale_keys.g.dart';
@@ -103,6 +105,7 @@ class _MakeOrderViewState extends State<MakeOrderView> {
           ),
           Expanded(
               child: PageView(
+            // physics: const NeverScrollableScrollPhysics(),
             onPageChanged: (index) {
               setState(() {
                 _currentIndex = index;
@@ -114,7 +117,28 @@ class _MakeOrderViewState extends State<MakeOrderView> {
               Step2(),
               Step3(),
             ],
-          ))
+          )),
+          Container(
+            padding: EdgeInsets.all(AppPadding.p20.sp),
+            width: double.infinity,
+            decoration: BoxDecoration(color: AppColors.white),
+            child: ElevatedButton(
+                onPressed: () {
+                  if (_currentIndex == 2) {
+                    AppDialog.underReviewDialog(context);
+                  } else {
+                    pageController.nextPage(
+                        duration: Duration(
+                          milliseconds: AppConstants.defaultDelay,
+                        ),
+                        curve: Curves.easeInOut);
+                  }
+                },
+                child: Text(
+                  tr(LocaleKeys.make_order_next),
+                  style: getBoldStyle(fontSize: 16.sp),
+                )),
+          )
         ],
       ),
     );

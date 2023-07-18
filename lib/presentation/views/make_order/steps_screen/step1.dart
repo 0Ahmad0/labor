@@ -208,7 +208,7 @@ class _Step1State extends State<Step1> {
                     context: context,
                     onSelect: (val) {
                       setState(() {
-                        cityController.text = val.displayName;
+                        cityController.text = val.nameLocalized.toString();
                       });
                     },
                   );
@@ -217,17 +217,6 @@ class _Step1State extends State<Step1> {
             ],
           ),
         ),
-        Container(
-          padding: EdgeInsets.all(AppPadding.p20.sp),
-          width: double.infinity,
-          decoration: BoxDecoration(color: AppColors.white),
-          child: ElevatedButton(
-              onPressed: () {},
-              child: Text(
-                tr(LocaleKeys.make_order_next),
-                style: getBoldStyle(fontSize: 16.sp),
-              )),
-        )
       ],
     );
   }
