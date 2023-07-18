@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:labor/presentation/resources/app_constants.dart';
 import 'package:labor/presentation/resources/app_theme.dart';
+import 'package:labor/presentation/views/orders/order_details_view.dart';
 import 'presentation/resources/app_routes.dart';
 import 'presentation/resources/app_strings.dart';
 import 'translations/codegen_loader.g.dart';
@@ -58,6 +59,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           onGenerateRoute: RoutesGenerator.getRoute,
           initialRoute: Routes.splashRoute,
+          // home: OrderDetailsView(),
         );
       },
     );
