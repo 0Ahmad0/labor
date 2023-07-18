@@ -22,7 +22,7 @@ class AppDialog {
         builder: (_) {
           return WillPopScope(
             onWillPop: () async {
-              return await false;
+              return false;
             },
             child: Dialog(
               insetPadding: EdgeInsets.symmetric(horizontal: AppPadding.p40.sp),
@@ -89,7 +89,7 @@ class AppDialog {
         builder: (_) {
           return WillPopScope(
             onWillPop: () async {
-              return await false;
+              return false;
             },
             child: Dialog(
               insetPadding: EdgeInsets.symmetric(horizontal: AppPadding.p40.sp),
@@ -156,7 +156,7 @@ class AppDialog {
         builder: (_) {
           return WillPopScope(
             onWillPop: () async {
-              return await false;
+              return false;
             },
             child: Center(
               child: SpinKitWaveSpinner(
