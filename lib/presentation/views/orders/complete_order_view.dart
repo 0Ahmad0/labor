@@ -8,6 +8,7 @@ import '../../../translations/locale_keys.g.dart';
 import '../../resources/app_colors.dart';
 import '../../resources/app_styles.dart';
 import '../../resources/app_values.dart';
+import '../../widgets/app_dialog.dart';
 import '../../widgets/app_order_item.dart';
 import '../../widgets/app_payment_item.dart';
 import '../../widgets/app_select_your_location.dart';
@@ -274,6 +275,7 @@ class _CompleteOrderViewState extends State<CompleteOrderView> {
             padding: EdgeInsets.all(AppPadding.p20.sp),
             child: ElevatedButton(
                 onPressed: () {
+                  AppDialog.showSuccessDialog(context);
                   if (_formKey.currentState!.validate()) {}
                 },
                 child: Text(

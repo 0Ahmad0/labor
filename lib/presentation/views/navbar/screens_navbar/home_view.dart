@@ -6,8 +6,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:labor/presentation/resources/app_assets.dart';
 import 'package:labor/presentation/resources/app_colors.dart';
 import 'package:labor/presentation/resources/app_constants.dart';
+import 'package:labor/presentation/resources/app_routes.dart';
 import 'package:labor/presentation/resources/app_styles.dart';
 import 'package:labor/presentation/resources/app_values.dart';
+import 'package:labor/presentation/widgets/app_dialog.dart';
 import 'package:labor/translations/locale_keys.g.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -88,7 +90,10 @@ class _HomeViewState extends State<HomeView> {
         backgroundColor: Colors.white,
         title: SvgPicture.asset(AppAssets.logo),
         leading: InkWell(
-          onTap: () {},
+          onTap: () {
+            AppDialog.loadingDialog(context);
+            // Navigator.pushNamed(context, Routes.notifications);
+          },
           child: Padding(
             padding: EdgeInsets.all(AppPadding.p16.sp),
             child: SvgPicture.asset(

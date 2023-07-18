@@ -3,12 +3,14 @@ import 'dart:async';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:labor/presentation/resources/app_routes.dart';
 import 'package:pinput/pinput.dart';
 
 import '../../../../translations/locale_keys.g.dart';
 import '../../../resources/app_colors.dart';
 import '../../../resources/app_styles.dart';
 import '../../../resources/app_values.dart';
+import '../../../widgets/app_dialog.dart';
 
 class OTPView extends StatefulWidget {
   OTPView({Key? key}) : super(key: key);
@@ -117,7 +119,13 @@ class _OTPViewState extends State<OTPView> {
               height: AppSize.s40.sp,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                AppDialog.loadingDialog(context);
+                Future.delayed(Duration(seconds: 5), () {
+                  Navigator.pop(context);
+                  Navigator.pushReplacementNamed(context, Routes.navbar);
+                });
+              },
               child: Text(
                 tr(LocaleKeys.otp_submit),
                 style: getBoldStyle(

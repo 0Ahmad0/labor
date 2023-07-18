@@ -44,6 +44,10 @@ dependencies:
   calendar_timeline: ^1.1.2
   #Save Local Data
   hive: ^2.2.3
+  #images and cashed
+  extended_image: ^7.0.2
+  #custome loading and wait
+  flutter_spinkit: ^5.2.0
   #remote database and FireBase
   firebase_core: ^2.15.0
   firebase_auth: ^4.7.1

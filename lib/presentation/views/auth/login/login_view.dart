@@ -7,6 +7,7 @@ import 'package:labor/presentation/resources/app_colors.dart';
 import 'package:labor/presentation/resources/app_routes.dart';
 import 'package:labor/presentation/resources/app_styles.dart';
 import 'package:labor/presentation/resources/app_values.dart';
+import 'package:labor/presentation/widgets/app_dialog.dart';
 import 'package:labor/presentation/widgets/app_textform_filed.dart';
 import 'package:labor/translations/locale_keys.g.dart';
 
@@ -106,7 +107,11 @@ class LoginView extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
-                    Navigator.pushReplacementNamed(context, Routes.navbar);
+                    AppDialog.loadingDialog(context);
+                    Future.delayed(Duration(seconds: 5), () {
+                      Navigator.pop(context);
+                      Navigator.pushReplacementNamed(context, Routes.navbar);
+                    });
                   }
                 },
                 child: Text(
@@ -144,9 +149,7 @@ class LoginView extends StatelessWidget {
                 height: AppSize.s20.sp,
               ),
               TextButton(
-                onPressed: () {
-                  Navigator.pushReplacementNamed(context, Routes.register);
-                },
+                onPressed: () {},
                 child: Text.rich(
                   TextSpan(children: [
                     TextSpan(
