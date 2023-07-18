@@ -42,8 +42,13 @@ dependencies:
   country_picker: ^2.0.20
   #Picker Date
   calendar_timeline: ^1.1.2
-  #databse and FireBase
+  #Save Local Data
+  hive: ^2.2.3
+  #remote database and FireBase
   firebase_core: ^2.15.0
+  firebase_auth: ^4.7.1
+  firebase_storage: ^11.2.5
+  google_sign_in: ^6.1.4
 
 
 
