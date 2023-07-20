@@ -149,7 +149,9 @@ class LoginView extends StatelessWidget {
                 height: AppSize.s20.sp,
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushReplacementNamed(context, Routes.register);
+                },
                 child: Text.rich(
                   TextSpan(children: [
                     TextSpan(
